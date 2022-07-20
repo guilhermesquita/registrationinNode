@@ -20,7 +20,7 @@ const sequelize = new Sequelize('registration', 'root', '260910', {
 //ROTAS
 
 app.get('/cad', function(req, res){
-    res.send('Rota de cadastro')
+    res.render('forms')
 })
 
 app.listen(8082, function(){
