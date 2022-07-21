@@ -16,3 +16,6 @@
     npm install nodemon@1.10.2 --dev
     #or
     npm install -g nodemon (recommended)
+- BodyParser (recebe dados de formulários no express)
+    ```bash
+    npm i --save body-parser
