@@ -17,16 +17,23 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 //ROUTES
+
+    app.get('/', function(req, res){
+        res.render('home')
+    })
+
     app.get('/cad', function(req, res){
         res.render('forms')
     })
 
     app.post('/add', function(req, res){
-        Post.create({
+        Post.create({   
             title: req.body.title,
             content: req.body.content
         }).then(function(){
-            res.send("Post has ")
+            res.redirect('/')
+        }).catch(function(erro){
+            res.send("[ERROR]")
         })
     })
 
