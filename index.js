@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express');     
 const app = express();
 const exphbs  = require('express-handlebars');
 var handlebars = exphbs.create({
@@ -17,11 +17,15 @@ const sequelize = new Sequelize('registration', 'root', '260910', {
     dialect: "mysql"
 });
 
-//ROTAS
+//ROUTES
 
-app.get('/cad', function(req, res){
-    res.render('forms')
-})
+    app.get('/cad', function(req, res){
+        res.render('forms')
+    })
+
+    app.post('/add', function(req, res){
+        res.send('Forms recept!')
+    })
 
 app.listen(8082, function(){
     console.log("Servidor Rodando")
