@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('registration', 'root', '260910', {
     host: "localhost",
-    dialect: "mysql"
+    dialect: "mysql",
+    query:{raw:true}
 });
 
 module.exports = {
